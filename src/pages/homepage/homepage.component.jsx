@@ -1,10 +1,14 @@
-import React from 'react';
+
+import React, { Fragment } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Directory from '../../components/directory/directory.component';
-import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+import { MDBCol, MDBContainer, MDBRow, MDBFooter,MDBIcon,MDBBtn } from "mdbreact";
 import './homepage.styles.scss';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 let styles = {
   
  width:'100%'
@@ -84,38 +88,70 @@ const HomePage = () => (
     
 
     <div className='foot'>
-    <MDBFooter color="blue" className="font-small pt-4 mt-4">
-      <MDBContainer fluid className="text-center text-md-left">
+    <MDBFooter color="white" className="font-small pt-4 mt-4">
+      <MDBContainer>
         <MDBRow>
-          <MDBCol md="6">
-            <h5 className="title">Footer Content</h5>
+          
+        <div class="col-md-4 col-sm-4 marb20">
+            <div class="ftr-tle">
+              <h4 class="white no-padding"><b>Privacy Info  & Follow us </b></h4>
+            </div>
+            </div>
             <p>
-              Here you can use rows and columns here to organize your footer
-              content.
+            We are committed to your privacy and will hold your information in accordance with our 'Privacy Policy'.
             </p>
-          </MDBCol>
+          
           <MDBCol md="6">
-            <h5 className="title">Links</h5>
+            <h5 className="title" >Links</h5>
             <ul>
-              <li className="list-unstyled">
-                <a href="#!">Link 1</a>
+              <li >
+              
+                <a href="shop"><MDBIcon icon="spinner" spin size="1x" fixed  color="white"/>
+<span className="sr-only">Loading...</span>  Shop</a>
               </li>
-              <li className="list-unstyled">
-                <a href="#!">Link 2</a>
+              <li >
+                <a href="shop"><MDBIcon icon="address-card" spin size="1x" fixed />
+<span className="sr-only">Loading...</span>  Contact</a>
               </li>
-              <li className="list-unstyled">
-                <a href="#!">Link 3</a>
+              <li>
+                <a href="signin"><MDBIcon icon="user-plus" spin size="1x" fixed />
+<span className="sr-only">Loading...</span>  Signup and Signin</a>
               </li>
-              <li className="list-unstyled">
-                <a href="#!">Link 4</a>
-              </li>
+              
             </ul>
           </MDBCol>
         </MDBRow>
+        </MDBContainer>
+         
+            
+            <MDBContainer>
+            <Fragment>
+      <MDBBtn size="lg" tag="a" floating social="fb" >
+        <MDBIcon fab icon="facebook-f" />
+      </MDBBtn>&nbsp;
+
+      &nbsp;&nbsp;<MDBBtn size="lg" tag="a" floating social="tw">
+        <MDBIcon fab icon="twitter" />
+      </MDBBtn>&nbsp;
+      &nbsp;&nbsp;<MDBBtn  color ="blue-grey" size="lg" tag="a" floating social="gplus">
+        <MDBIcon fab icon="google-plus-g"  />
+      </MDBBtn>&nbsp;
+      &nbsp;&nbsp;
+      <MDBBtn  size="lg" tag="a" floating social="ins">
+        <MDBIcon fab icon="instagram" />
+      </MDBBtn>&nbsp;
+      &nbsp;&nbsp;
+      <MDBBtn size="lg" tag="a" floating social="yt">
+        <MDBIcon fab icon="youtube" />
+      </MDBBtn>
+      </Fragment>
       </MDBContainer>
+            
+         
+      
       <div className="footer-copyright text-center py-3">
         <MDBContainer fluid>
-          &copy; {new Date().getFullYear()} Copyright: <a href="https://www.mdbootstrap.com"> MDBootstrap.com </a>
+          &copy; {new Date().getFullYear()} Copyright: <a href="https://www.mdbootstrap.com"> Regalia Clothing Store </a>
         </MDBContainer>
       </div>
     </MDBFooter>
